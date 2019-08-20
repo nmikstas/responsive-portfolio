@@ -236,29 +236,86 @@ h1
 
 @media screen and (max-width: 980px)
 {
-    .header_name
+    .center_header_div
     {
-        font-family: Georgia, Times, serif;
-        background-color: #4aaaa5;
-        font-size: 30px;
-        font-weight: bold;
-        color: #ffffff;
-        text-align: center;
-        text-decoration: none;
-        padding: 30px;
+        width: 748px;
     }
+
+    .center_content_div
+    {
+        width: 688px;
+    }
+
+    .text_box, .text_area
+    {
+        width: 678px;
+    }
+
 }
 
 @media screen and (max-width: 768px)
 {
+    .center_header_div
+    {
+        width: 620px;
+    }
 
+    .center_content_div
+    {
+        width: 560px;
+    }
+
+    .text_box, .text_area
+    {
+        width: 550px;
+    }
 }
 
 @media screen and (max-width: 640px)
 {
-    .header-name
+    
+    header
+    {
+        height: 140px;
+        padding: 0px;
+    }
+
+    .header_name
+    {
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header-links
+    {
+        float: none;
+        margin: 0 auto;
+        width: 265px;
+    }
+
+    .center_header_div
+    {
+        width: 100%;  
+    }
+
+    .main_content_div
+    {
+        min-height: calc(100vh - 96px - 93px - 94px);
+    }
+
+    .center_content_div
+    {
+        margin: 0;
+        width: calc(100% - 62px);
+    }
+
+    .text_box, .text_area
     {
         width: 100%;
-        background-color: #ffffff;
     }
+   
 }
