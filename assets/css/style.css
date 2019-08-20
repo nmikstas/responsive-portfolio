@@ -116,10 +116,11 @@ h1
 
 .main_content_div
 {
+    /* Need to account for the header, footer and borders */
+    min-height: calc(100vh - 96px - 93px - 48px);
     background-image: url("../images/mosaic.png");
     padding-top: 40px;
     padding-bottom: 40px;
-    min-height: calc(100vh - 96px - 93px - 48px);
 }
 
 .center_content_div
@@ -138,6 +139,8 @@ h1
 {
     float: left;
     padding-right: 30px;
+    max-width: 100%;
+    height: auto;
 }
 
 /******************************************* Portfolio *******************************************/
@@ -234,6 +237,8 @@ h1
     margin-bottom: 30px;
 }
 
+/*************************************** Responsive stuff ****************************************/
+
 @media screen and (max-width: 980px)
 {
     .center_header_div
@@ -250,7 +255,6 @@ h1
     {
         width: 678px;
     }
-
 }
 
 @media screen and (max-width: 768px)
@@ -269,11 +273,16 @@ h1
     {
         width: 550px;
     }
+
+    .portfolio_block
+    {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 640px)
 {
-    
     header
     {
         height: 140px;
@@ -292,9 +301,10 @@ h1
 
     .header-links
     {
+        /* Exact width of the header links */
+        width: 265px;
         float: none;
         margin: 0 auto;
-        width: 265px;
     }
 
     .center_header_div
@@ -304,18 +314,43 @@ h1
 
     .main_content_div
     {
+        /* Need to account for the header, footer and borders */
         min-height: calc(100vh - 96px - 93px - 94px);
     }
 
     .center_content_div
     {
-        margin: 0;
+        /* Need to account for padding and borders */
         width: calc(100% - 62px);
+        margin: 0;
     }
 
     .text_box, .text_area
     {
         width: 100%;
     }
-   
+
+    #my_pic
+    {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .portfolio_block
+    {
+        display: block;
+        margin: 0 auto;
+        height: calc(200px * .82);
+        width: calc(300px * .82);
+        background-size: calc(270px * .82) calc(180px * .82);
+    }
+
+    .portfolio_link
+    {
+        font-size: 17px;
+        padding: 15px;
+        bottom: 20px;
+        width: calc(230px * .83);
+    }
 }
